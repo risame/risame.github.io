@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>RiSAME's Offical website</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function startmarquee(lh,speed,delay) { 
+    var p=false; 
+    var t; 
+    var sh; 
+    var o=document.getElementById("marqueebox"); 
+    o.innerHTML+=o.innerHTML; 
+    o.style.marginTop=0; 
+    o.onmouseover=function(){p=true;} 
+    o.onmouseout=function(){p=false;} 
+    function start(){ 
+        sh = o.offsetHeight; 
+        o.style.height = sh; 
+        t=setInterval(scrolling,speed); 
+        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+    } 
+    function scrolling(){ 
+        if(parseInt(o.style.marginTop)%lh!=0){ 
+            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
+        }else{ 
+            clearInterval(t); 
+            setTimeout(start,delay); 
+        } 
+    } 
+    setTimeout(start,delay); 
+} 
+</script> 
+</head>
+<body>
+<!-- logo-->
+<!-- <div id="header" class="center">
+	<h1 id="logo" class="notext"><a href="index.html">RiSAME</a></h1>
+	<div class="cl">&nbsp;</div>
+</div> -->
+<!-- end of logo -->
+
+<!-- shell -->
+<div class="shell">
+	
+	<!-- slider -->
+	<div id="slider">
+
+		<!-- left content -->
+		<div class="content">
+			<ul>
+			  <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+				  <div><h1 id="logo">
+					<a href="index.html">RiSAME</a></h1>
+					<!-- <h3 id="logo2">
+					求是	求实	求新	求精
+					</h3> -->
+				  </div>
+			    	<!-- <div class="text-container">
+			    		<h2>小组新闻</h2>
+			    		<p>1. 我们小组有3篇论文被软件分析、演化与再工程国际会议SANER 2015录用</br></br>
+			    				                               2. 孙小兵参加由中国计算机学会软件工程专委会、上海市计算机学会青年工作委员会与YOCSEF共同主办的“软件工程：研究与实践”研讨会举行</br>
+			    				                            </p>
+			    						</div>
+			    						
+			    						<div id="canlendar">
+			    						</div> -->
+					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
+						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
+														<div class="tp">1. 柳郁参加学院毕业公开答辩，获得公开答辩唯一优秀成绩</div>
+<div class="tp">2. 耿强、胡嘉俊主持的江苏省大学生科创项目获得学院大科创项目唯一优秀成绩</div>  
+<div class="tp">3. 论文“MSR4SM: Using Topic Models to Effectively Mining Software Repositories for Software Maintenance Tasks”被Information & Software Technology录用</div> 
+							<div class="tp">4. 孙小兵参加由中国计算机学会软件工程专委会和国际需求工程委员会主办，复旦大学承办的“互联网环境下的需求工程”研讨会</div><div class="tp"></div> 
+							<div class="tp">5. 刘湘月、杨辉参加南京大学承办的EASE2015国际会议，其中杨辉做会议论文报告</div>
+                                                        <div class="tp">6. 发明专利“基于概念格的软件多错误定位方法”和“基于形式概念分析的回归测试方法”被国家知识产权局授权</div>
+						</div>
+					</div>
+			    </li>
+                
+                <!-- <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+                			    	<div class="text-container">
+                			    		<h2>研讨会日程</h2>
+                			    		<p>
+                        研讨会时间：2015-01-20</br></br>
+                        地点:扬州大学信息工程学院软件实验室</br></br>
+                        主题：毕业设计指导</br></br>
+                        报告人：郭汉伟</br></br>
+                        </p>
+                			    </li> -->
+			     <!--
+                 li><img src="css/images/slider-image.gif" alt="" class="slide-image" />
+			    	<div class="text-container">
+			    		<h2>Lorem ipsum dolor sit amet.</h2>
+			    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur ante vel augue egestas ac accumsan nunc sollicitudin. Fusce gravida vehicula neque, vitae fringilla ante aliquet in.</p>
+			    		<a href="#" class="btn"><span>read more</span></a>
+			    		<div class="cl">&nbsp;</div>
+			    	</div>
+			    	<div class="cl">&nbsp;</div>
+			    </li>
+                -->
+			</ul>
+
+     </div>
+		<!-- end left content -->
+		
+		<!-- slider navigation -->
+		<!-- <div class="nav">
+			<a href="#" id="up" class="notext">&nbsp;</a>
+			<a href="#" id="down" class="notext">&nbsp;</a>
+		</div> -->
+		<!-- end slider navigation -->
+
+	</div>
+	<!-- end slider -->
+	
+	<!-- navigation -->
+	<div id="navigation">
+		<ul>
+		    <li><a href="index.html" class="active"><span>首页</span></a></li>
+		    <li><a href="member.html"><span>人员</span></a></li>
+		    <li><a href="project.html"><span>项目</span></a></li>
+		    <li><a href="publications.html"><span>成果</span></a></li>
+		    <li><a href="awards.html"><span>荣誉</span></a></li>
+		    <!-- <li><a href="cooperate.html"><span>合作</span></a></li> -->
+            <li><a href="links.html"><span>资源</span></a></li>
+		</ul>
+	</div>
+	<!-- end navigation -->
+	
+	<!-- main -->
+	<div id="main">
+		<!-- content -->
+		<div id="content" class="left">
+			
+			<div class="news">
+				
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>孙小兵</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                            <font face="Times New Roman" size="2">教育部自然科学二等奖</font><p align="justify">  
+<font face="Times New Roman" size="2">扬州大学“新世纪人才工程”培养对象优秀青年骨干教师 </font><p align="justify">  
+<font face="Times New Roman" size="2">扬州大学科技先锋 </font><p align="justify"> 
+<font face="Times New Roman" size="2">扬州大学优秀毕业设计指导老师</font><p align="justify">  
+
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>刘湘月</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">发明类专利：“一种基于层次主题模型的程序特征树的生成方法”</font><p align="justify">   
+							<font face="Times New Roman" size="2">发明类专利：“一种基于LDA模型的多粒度层次软件聚类方法”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">软件著作权：“基于自然语言处理的程序代码预处理软件”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">软件著作权：“基于LDA的JAVA包聚类软件”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">软件著作权：“基于hLDA的源代码特征提取软件”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">论文：PFN: A Novel Program Feature Network for Program Comprehension.  IEEE/ACIS </font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>杨辉</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">校长一等奖学金、国家励志奖学金、校优秀团干部、院优秀团员</font><p align="justify">   
+							<font face="Times New Roman" size="2">发明类专利：“一种基于协相关主题模型的面向软件修改的个性化任务推荐方法”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">软件著作权：“基于CTM模型的开发者个性化推荐软件”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">软件著作权：“基于hLDA的源代码特征提取软件”</font><p align="justify"> 
+							
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>刘杨超</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">校长二等奖学金、校挑战杯三等奖、校级优秀三好学生、校级优秀共青团员</font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>胡嘉俊</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">全国大学生英语竞赛一等奖、江苏省高等数学竞赛三等奖、校长一等奖学金</font><p align="justify"> 
+							<font face="Times New Roman" size="2">发明类专利：“一种基于动态主题模型的软件演化建模方法”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">论文：“Empirical Studies on the NLP Techniques for Source Code Data Preprocessing.”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">论文：“Explore the Evolution of Development Topics via On-Line LDA.”</font><p align="justify"> 
+							<font face="Times New Roman" size="2">论文：“Modeling the Evolution of Development Topics Using Dynamic Topic Models.”</font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+
+				</div><div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>陆美莉</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">全国大学生英语竞赛三等奖、全国英语口语测评大赛三等奖</font><p align="justify"> 
+                           <font face="Times New Roman" size="2">江苏省第四届理工科大学生人文社会科学知识竞赛优秀奖、“蓝桥杯”江苏省二等奖</font><p align="justify"> 
+							<font face="Times New Roman" size="2">校长一等奖学金、朱敬文奖学金、校大学生科普知识竞赛一等奖、校大学生科普知识接力赛三等奖、校优秀团员、院程序设计竞赛一等奖、院三好学生</font><p align="justify"> 
+							<font face="Times New Roman" size="2">发明专利：“一种面向软件维护的修改请求的重新定制的方法”</font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+
+				</div></div><div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>赵晗</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">国家励志奖学金、软件设计大赛三等奖、蓝桥杯程序设计大赛三等奖</font><p align="justify"> 
+                          
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				
+			</div>
+			
+					
+		</div>
+
+		
+		<!-- right -->
+		<div id="sidebar" class="right">
+			
+			<!-- blog roll -->
+			
+			<!-- end blog roll -->
+							
+			<!-- contact -->
+		
+			<!-- end contact -->
+			
+		</div>
+		<!-- end right-->
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<p class="left">
+			<a href="http://www.yzu.edu.cn">扬州大学</a>
+			<span>|</span>
+			<a href="http://xxgcxy.yzu.edu.cn/">扬州大学信息工程学院</a>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253524161'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253524161%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+           <!--  <span>|</span>
+            			<a href="http://keysoftlab.nju.edu.cn">软件新技术国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.ios.ac.cn">计算机科学国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sklse.whu.edu.cn">软件工程国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.nlsde.buaa.edu.cn/">软件开发环境国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sei.pku.edu.cn/">北京大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://www.se.fudan.edu.cn">复旦大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://ise.seu.edu.cn/"> 东南大学软件工程研究所 </a>  -->      
+		</p>
+		<!-- <p class="right">
+			&copy; Design by hansguo</a>
+		</p> -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end shell -->
+<script type="text/javascript" charset="utf-8">
+	Cufon.now();
+</script>
+</body>
+<script type="text/javascript">
+startmarquee(1118,200,-100); 
+</script> 
+</html>

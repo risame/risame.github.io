@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>RiSAME's Offical website</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function startmarquee(lh,speed,delay) { 
+    var p=false; 
+    var t; 
+    var sh; 
+    var o=document.getElementById("marqueebox"); 
+    o.innerHTML+=o.innerHTML; 
+    o.style.marginTop=0; 
+    o.onmouseover=function(){p=true;} 
+    o.onmouseout=function(){p=false;} 
+    function start(){ 
+        sh = o.offsetHeight; 
+        o.style.height = sh; 
+        t=setInterval(scrolling,speed); 
+        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+    } 
+    function scrolling(){ 
+        if(parseInt(o.style.marginTop)%lh!=0){ 
+            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
+        }else{ 
+            clearInterval(t); 
+            setTimeout(start,delay); 
+        } 
+    } 
+    setTimeout(start,delay); 
+} 
+</script> 
+</head>
+<body>
+<!-- logo-->
+<!-- <div id="header" class="center">
+	<h1 id="logo" class="notext"><a href="index.html">RiSAME</a></h1>
+	<div class="cl">&nbsp;</div>
+</div> -->
+<!-- end of logo -->
+
+<!-- shell -->
+<div class="shell">
+	
+	<!-- slider -->
+	<div id="slider">
+
+		<!-- left content -->
+		<div class="content">
+			<ul>
+			  <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+				  <div><h1 id="logo">
+					<a href="index.html">RiSAME</a></h1>
+					<!-- <h3 id="logo2">
+					求是	求实	求新	求精
+					</h3> -->
+				  </div>
+			    	<!-- <div class="text-container">
+			    		<h2>小组新闻</h2>
+			    		<p>1. 我们小组有3篇论文被软件分析、演化与再工程国际会议SANER 2015录用</br></br>
+			    				                               2. 孙小兵参加由中国计算机学会软件工程专委会、上海市计算机学会青年工作委员会与YOCSEF共同主办的“软件工程：研究与实践”研讨会举行</br>
+			    				                            </p>
+			    						</div>
+			    						
+			    						<div id="canlendar">
+			    						</div> -->
+					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
+						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
+														<div class="tp">1. 柳郁参加学院毕业公开答辩，获得公开答辩唯一优秀成绩</div>
+<div class="tp">2. 耿强、胡嘉俊主持的江苏省大学生科创项目获得学院大科创项目唯一优秀成绩</div>  
+<div class="tp">3. 论文“MSR4SM: Using Topic Models to Effectively Mining Software Repositories for Software Maintenance Tasks”被Information & Software Technology录用</div> 
+							<div class="tp">4. 孙小兵参加由中国计算机学会软件工程专委会和国际需求工程委员会主办，复旦大学承办的“互联网环境下的需求工程”研讨会</div><div class="tp"></div> 
+							<div class="tp">5. 刘湘月、杨辉参加南京大学承办的EASE2015国际会议，其中杨辉做会议论文报告</div>
+                                                        <div class="tp">6. 发明专利“基于概念格的软件多错误定位方法”和“基于形式概念分析的回归测试方法”被国家知识产权局授权</div>
+						</div>
+					</div>
+				</li>
+                
+                <!-- <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+                			    	<div class="text-container">
+                			    		<h2>研讨会日程</h2>
+                			    		<p>
+                        研讨会时间：2015-01-20</br></br>
+                        地点:扬州大学信息工程学院软件实验室</br></br>
+                        主题：毕业设计指导</br></br>
+                        报告人：郭汉伟</br></br>
+                        </p>
+                			    </li> -->
+			     <!--
+                 li><img src="css/images/slider-image.gif" alt="" class="slide-image" />
+			    	<div class="text-container">
+			    		<h2>Lorem ipsum dolor sit amet.</h2>
+			    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur ante vel augue egestas ac accumsan nunc sollicitudin. Fusce gravida vehicula neque, vitae fringilla ante aliquet in.</p>
+			    		<a href="#" class="btn"><span>read more</span></a>
+			    		<div class="cl">&nbsp;</div>
+			    	</div>
+			    	<div class="cl">&nbsp;</div>
+			    </li>
+                -->
+			</ul>
+
+     </div>
+		<!-- end left content -->
+		
+		<!-- slider navigation -->
+		<!-- <div class="nav">
+			<a href="#" id="up" class="notext">&nbsp;</a>
+			<a href="#" id="down" class="notext">&nbsp;</a>
+		</div> -->
+		<!-- end slider navigation -->
+
+	</div>
+	<!-- end slider -->
+	
+	<!-- navigation -->
+	<div id="navigation">
+		<ul>
+	        <li><a href="index.html" class="active"><span>首页</span></a></li>
+		    <li><a href="member.html"><span>人员</span></a></li>
+		    <li><a href="project.html"><span>项目</span></a></li>
+		    <li><a href="publications.html"><span>成果</span></a></li>
+		    <li><a href="awards.html"><span>荣誉</span></a></li>
+		    <!-- <li><a href="cooperate.html"><span>合作</span></a></li> -->
+            <li><a href="links.html"><span>资源</span></a></li>
+		</ul>
+	</div>
+	<div id="navigation1">
+		<ul>
+	        <li><a href="publications.html" class="active"><span>论文</span></a></li>
+		    <li><a href="patent.html"><span>专利</span></a></li>
+		    <li><a href="copyright.html"><span>软件著作权</span></a></li>
+		</ul>
+	</div>
+	<!-- end navigation -->
+	
+	<!-- main -->
+	<div id="main">
+		<!-- content -->
+		<div id="content" class="left">
+
+			<div class="news">
+				
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>2015</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                            <font face="Times New Roman" size="2">[1]	Xiaobing Sun, Bixin Li, Hareton Leung, Bin Li, Yun Li. MSR4SM: Using Topic Models to Effectively Mining Software Repositories for Software Maintenance Tasks. Information & Software Technology, 2015. Volume 66, October 2015, Pages 1–12  </font><p align="justify">  
+<font face="Times New Roman" size="2">[2]	Yangchao Liu, Xiaobing Sun and Yucong Duan. Analyzing Program Readability Based on WordNet.  International Conference on Evaluation and Assessment in Software Engineering, EASE'15 Nanjing, China </font><p align="justify">  
+<font face="Times New Roman" size="2">[3]	Jiajun Hu, Xiaobing Sun, David Lo and Bin Li. Modeling the Evolution of Development Topics Using Dynamic Topic Models.22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, IEEE SANER'15 （previous WCRE + CSMR）, Québec, Canada, 2015 </font><p align="justify">  
+
+<font face="Times New Roman" size="2">[4]	Meili Lu, Xiaobing Sun, Shaowei Wang, David Lo and Yucong Duan. Query Expansion via Wordnet for Effective Code Search . 22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, IEEE SANER'15 ERA , Québec, Canada, 2015 </font><p align="justify">  
+<font face="Times New Roman" size="2">[5]	Jiajun Hu, Xiaobing Sun and Bin Li. Explore the Evolution of Development Topics via On-Line LDA. 22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, IEEE SANER'15 ERA, Québec, Canada, 2015 </font><p align="justify">  
+<font face="Times New Roman" size="2">[6]	Yucong Duan, Xiaobing Sun, Nanjangud C Narendra, Junxing Lu, Bo Hu, Shixiang Wan, Wencai Du, Wenlong Feng. Service Value/Quality/Satisfactory Factors: Collection, Classification and Analysis. International Journal of u- and e- Service, Science and Technology. 2015.  </font><p align="justify">  
+<font face="Times New Roman" size="2">[7]	孙小兵,李云,李必信,文万志. 形式概念分析在软件维护中的应用. 电子学报, 2015, 43(7): 1399-1406.  </font><p align="justify">
+<font face="Times New Roman" size="2">[8]	Xiaobing Sun, Bixin Li, Bin Li, Ying Chen. SE-FCA: A Model of Software Evolution with Formal Concept Analysis. Acta Electronica Sinica& Chinese Journal of Electronics, 2015 Vol. 24 (CJE-1): 13-19.  </font><p align="justify">
+<font face="Times New Roman" size="2">[9]	Xiaobing Sun, Yun Li, Bin Li, Ying Chen. What Information in Software Historical Repositories Do We Need to Support Software Maintenance Tasks? An Approach Based on Topic Model. Computer and Information Science, Studies in Computational Intelligence. Volume 566, Springer, 2015, 27-37. </font><p align="justify">
+<font face="Times New Roman" size="2">[10]	Yucong Duan, Yuan Cao, Xiaobing Sun. Various “aaS” of Everything as a Service. In 16th IEEE/ACIS International Conference on Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing (SNPD), 2015.</font><p align="justify">
+<font face="Times New Roman" size="2">[11]	Yucong Duan, Chengxiang Ren, Nianjun Zhou, Xiaobing Sun, Nanjangud C. Narendra, Bo Hu. Everything as a Service (XaaS) on the Cloud: Origins, Current and Future Trends. IEEE International Conference on Cloud Computing (CLOUD), 2015.</font><p align="justify">
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>2014</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">[12]	孙小兵,李斌,陈颖,李必信,文万志. 软件修改影响分析研究与进展. 电子学报, 2014, 42 (12): 2467-2476.</font><p align="justify">   
+<font face="Times New Roman" size="2">[13]	Xiaobing Sun, Hareton Leung, Bin Li, Bixin Li. Change Impact Analysis and Changeability Assessment for a Change Proposal: An Empirical Study. Journal of Systems and Software 96: 51-60 (2014) </font><p align="justify"> 
+<font face="Times New Roman" size="2">[14]	孙小兵,张允,陶传奇. JUCC：一种基于JUnit框架展示代码覆盖的交互式测试工具. 小型微型计算机系统. 2014年04期: 807-810. </font><p align="justify"> 
+<font face="Times New Roman" size="2">[15]	文万志,陈翔,孙小兵.基于程序谱概念格的软件错误定位技术.四川大学学报（工程科学版）,2014,46(2):87~94. </font><p align="justify"> 
+<font face="Times New Roman" size="2">[16]	Xiaobing Sun, Xiangyue Liu, Jiajun Hu, Junwu Zhu. Empirical Studies on the NLP Techniques for Source Code Data Preprocessing. In EAST of ICSSP, 2014.  </font><p align="justify"> 
+<font face="Times New Roman" size="2">[17]	Xiangyue Liu, Xiaobing Sun, Bin Li. Top-down Program Comprehension with Multilayer Clustering Based on LDA. In EAST of ICSSP, 2014. </font><p align="justify"> 
+<font face="Times New Roman" size="2">[18]	Xiangyue Liu, Xiaobing Sun, Bin Li. PFN: A Novel Program Feature Network for Program Comprehension. In Proc. of the 13th IEEE/ACIS International Conference on Computer and Information Science, Taiyuan, China, June 4-6, 2014, 349-354. </font><p align="justify"> 
+<font face="Times New Roman" size="2">[19]	Li Jiang, Xiaobing Sun, Yun Li, Xiangyue Liu. Automatic Generation of Package Diagram to Summarize Java Packages. In Proc. of the 13th IEEE/ACIS International Conference on Computer and Information Science, Taiyuan, China, June 4-6, 2014, 343-348.  </font><p align="justify"> 
+<font face="Times New Roman" size="2">[20]	Yu Liu, Xiaobing Sun, Xiangyue Liu, Yun Li. Supporting Program Comprehension with Program Summarization. In Proc. of the 13th IEEE/ACIS International Conference on Computer and Information Science, Taiyuan, China, June 4-6, 2014, 363-368.  </font><p align="justify"> 
+<font face="Times New Roman" size="2">[21]	Yucong Duan, Nanjangud C Narendra, Honghao Gao and Xiaobing Sun. Value-driven Service Matching and Bundling via a Service Value Broker. International Journal of u- and e- Service, Science and Technology. Vol. 7, No. 6 (2014), pp. 253-264. </font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				
+				<div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>2013</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <font face="Times New Roman" size="2">[22]	Bixin Li, Xiaobing Sun, Jacky Keung. FCA-CIA: An approach of using FCA to support cross-level change impact analysis for object oriented Java programs. Information & Software Technology, 2013, 55(8): 1437-1449. </font><p align="justify">
+         <font face="Times New Roman" size="2">[23]	Xiaobing Sun, Bixin Li, Wanzhi Wen, Sai Zhang. Analyzing Impact Rules of Different Change Types to Support Change Impact Analysis. International Journal of Software Engineering and Knowledge Engineering, 2013 23(3): 259-288.  </font><p align="justify">
+  <font face="Times New Roman" size="2">[24]	Bixin L*, Xiaobing Sun, Hareton Leung, Sai Zhang. A survey of code-based change impact analysis techniques. Journal of Software Testing, Verification and Reliabiblity, 2013, 23(8): 613-646.  </font><p align="justify">    
+ <font face="Times New Roman" size="2">[25]	Bixin Li, Qiandong Zhang, Xiaobing Sun, Hareton Leung. Using Water Wave Propagation Phenomenon to Study Software Change Impact Analysis. Advances in Engineering Software, Elsevier, 2013, 58(4):45-53. </font><p align="justify">
+<font face="Times New Roman" size="2">[26]	Xiaobing Sun, Bixin Li, Wanzhi Wen. CLPS-MFL: Using Concept Lattice of Program Spectrum for Effective Multi-fault Localization. In 13th International Conference on Quality Software, July 29-30, 2013: 204-207, Nanjing, China.  </font><p align="justify">	
+<font face="Times New Roman" size="2">[27]	Xiaobing Sun, Ying Chen, Bin Li, Bixin Li. Exploring Software Engineering Data with Formal Concept Analysis. ICSE Workshop: Data Analysis Patterns in Software Engineering. May 21, 2013, San Francisco Bay, USA. In press.  </font><p align="justify">
+<font face="Times New Roman" size="2">[28]	Bixin Li, Qiandong Zhang, Xiaobing Sun, Hareton Lueng. WAVE-CIA: A Novel CIA Approach Based on Call Graph Mining. In Proc. of the 28th Symposium On Applied Computing, March 18- 22, 2013, Coimbra, Portugal.  </font><p align="justify">
+<font face="Times New Roman" size="2">[29]	文万志,李必信,孙小兵,齐珊珊. 基于条件执行切片谱的多错误定位. 计算机研究与发展, 50(5):1030-1043, 2013.  </font><p align="justify"> 
+<font face="Times New Roman" size="2">[30]	文万志, 李必信, 孙小兵，刘翠翠. 一种基于层次切片谱的软件错误定位技术. 软件学报,24(5):977-992, 2013.  </font><p align="justify"> 
+<font face="Times New Roman" size="2">[31]	陶传奇, 李必信, 孙小兵, Jerry Gao. 基于模型的系统化部件软件修改影响分析. 软件学报, 24(5): 942-960, 2013.  </font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+                
+                <div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>2012</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                          <font face="Times New Roman" size="2">[32]	Bixin Li, Xiaobing Sun, Hareton Leung. Combining Concept Lattice with Call Graph for Impact Analysis. Advances in Engineering Software, 2012, 53(11):1-13. </font><p align="justify">   
+      <font face="Times New Roman" size="2">[33]	孙小兵,李必信,陶传奇.基于LoCMD的软件修改分析技术.软件学报.2012,23(6):1368-1381.  </font><p align="justify">
+<font face="Times New Roman" size="2">[34]	Xiaobing Sun, Bixin Li, Qiandong Zhang. A Change Proposal Driven Approach for Changeability Assessment Using Formal Concept Analysis. In: Proc. of the IEEE International Computer Software and Applications Conference,  July 16-20, 2012, pp. 328-333, Izmir, Turkey.  </font><p align="justify">       
+<font face="Times New Roman" size="2">[35]	Xiaobing Sun, Bixin Li, Chuanqi Tao, Qiandong Zhang. Using FCA-based Change Impact Analysis for Regression Testing. In: Proc. of the International Conference on Software Engineering and Knowledge Engineering, July 1-3, 2012, pp. 452-457, Hotel Sofitel, Redwood City, San Francisco Bay, USA. </font><p align="justify">
+       <font face="Times New Roman" size="2">[36]	Xiaobing Sun, Bin Li, Bixin Li, Wanzhi Wen. A Comparative Study of Static CIA techniques. In: Proc. of the ACM Asia-Pacific Symposium on Internetware, October 30-31, 2012, Qingdao, China.  </font><p align="justify">	
+       <font face="Times New Roman" size="2">[37]	Qiandong Zhang, Bixin Li, Xiaobing Sun. Mining Call Graph for Change Impact Analysis. In: Proc. of the International Conference on Software Engineering and Knowledge Engineering, July 1-3, 2012, pp. 7-12, Hotel Sofitel, Redwood City, San Francisco Bay, USA.  </font><p align="justify"> 
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+                
+                <!-- <div class="news-item" >
+                					<div class="news-body" style="width:950px">
+                    <h3>2011</h3>
+                						<div class="cl">&nbsp;</div>
+                						<p>
+                        <font face="Times New Roman" size="2">[J1]	Xiaobing Sun, Bixin Li, Chuanqi Tao, Sai Zhang. HSM-based Change Impact Analysis of Object-Oriented Java Programs. Chinese of Journal Electronics, 2011,20(2): 247-251. [SCI/EI,一级学报]</font><p align="justify">
+                	<font face="Times New Roman" size="2">[C2]	Xiaobing Sun, Bixin Li. Using Formal Concept Analysis to Support Change Analysis. In: Proc. of 26th IEEE/ACM International Conference on Automated Software Engineering, November 6-10, 2011, pp. 641-645, Lawrence, Kansas, USA. [EI, CCF推荐B类] </font><p align="justify">
+                <font face="Times New Roman" size="2">[C3]	Xiaobing Sun, Bixin Li, Sai Zhang and Chuanqi Tao. Using Lattice of Class and Method Dependence for Change Impact Analysis of Object Oriented Programs. In: Proc. of the 26th Symposium on Applied Computing,  Mar 21 - 24, 2011, pp.1439-1444, TaiChung, Taiwan, China. [EI]</font><p align="justify">       
+                <font face="Times New Roman" size="2">[C4]	Wanzhi Wen, Bixin Li, Xiaobing Sun, Jiakai Li. Program Slicing Spectrum-based Software Fault Localization. In: Proc. of the International Conference on Software Engineering and Knowledge Engineering, July 7-9, 2011, pp. 213-218, Eden Roc Renaissance Hotel Miami Beach, USA. [EI , CCF推荐C类]</font><p align="justify">    
+                <font face="Times New Roman" size="2">[C5]	Xiang Chen, Lijiu Zhang, Qing Gu, Haigang Zhao, Ziyuan Wang, Xiaobing Sun, Daoxu Chen: A test suite reduction approach based on pairwise interaction of requirements. SAC 2011: 1390-1397. [EI] </font><p align="justify">
+                        </p>
+                					</div>
+                					<div class="cl">&nbsp;</div>
+                				</div>
+                
+                <div class="news-item" >
+                					<div class="news-body" style="width:950px">
+                    <h3>2010</h3>
+                						<div class="cl">&nbsp;</div>
+                						<p>
+                          <font face="Times New Roman" size="2">[C1] Xiaobing Sun, Bixin Li, Chuanqi Tao, Wanzhi Wen, Sai Zhang. Change Impact Analysis Based on a Taxonomy of Change Types. In Proc. of IEEE  International Computer Software and Applications Conference (COMPSAC 2010), July 19-23, 2010, Seoul,South Korea. [EI,CCF推荐C类]</font><p align="justify">
+                	<font face="Times New Roman" size="2">[C2] Chuanqi Tao, Bixin Li, Xiaobing Sun. A Hierarchical Model for Regression Test Selection and Cost Analysis of Java Programs. In Proc. of the 2010 Asia Pacific Software Engineering Conference (APSEC2010), Sydney, Australia, 30 November-3 December 2010. IEEE Computer Society Press.[EI,CCF推荐C类]  </font><p align="justify">
+                <font face="Times New Roman" size="2">[C3] Chuanqi Tao, Bixin Li, Xiaobing Sun. An Approach to Regression Test Selection Based on Hierarchical Slicing Technique In Proc. of IEEE  International Computer Software and Applications Conference (COMPSAC 2010), July 19-23, 2010, Seoul,South Korea.[EI,CCF推荐C类] </font><p align="justify">       
+                <font face="Times New Roman" size="2">[J4] 张重峰,李必信,孙小兵. 基于切片度量的重构对象识别. 东南大学学报(自然科学版),2010年40卷第2期. </font><p align="justify">
+                        <font face="Times New Roman" size="2">[J5] 许高阳,李必信,孙小兵,陶传奇. 一种基于层次切片的软件错误定位方法. 东南大学学报(自然科学版),2010年40卷第4期. </font><p align="justify">
+                        </p>
+                					</div>
+                					<div class="cl">&nbsp;</div>
+                				</div> -->
+                
+                
+                
+                
+			
+			</div>
+			
+					
+		</div>
+
+		
+		<!-- right -->
+		<div id="sidebar" class="right">
+			
+			<!-- blog roll -->
+			
+			<!-- end blog roll -->
+							
+			<!-- contact -->
+		
+			<!-- end contact -->
+			
+		</div>
+		<!-- end right-->
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<p class="left">
+			<a href="http://www.yzu.edu.cn">扬州大学</a>
+			<span>|</span>
+			<a href="http://xxgcxy.yzu.edu.cn/">扬州大学信息工程学院</a>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253524161'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253524161%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            <!-- <span>|</span>
+            			<a href="http://keysoftlab.nju.edu.cn">软件新技术国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.ios.ac.cn">计算机科学国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sklse.whu.edu.cn">软件工程国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.nlsde.buaa.edu.cn/">软件开发环境国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sei.pku.edu.cn/">北京大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://www.se.fudan.edu.cn">复旦大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://ise.seu.edu.cn/"> 东南大学软件工程研究所 </a> -->       
+		</p>
+		<!-- <p class="right">
+			&copy; Design by hansguo</a>
+		</p> -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end shell -->
+<script type="text/javascript" charset="utf-8">
+	Cufon.now();
+</script>
+</body>
+<script type="text/javascript">
+startmarquee(1118,200,-100); 
+</script> 
+</html>

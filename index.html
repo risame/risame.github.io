@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function startmarquee(lh,speed,delay) { 
+    var p=false; 
+    var t; 
+    var sh; 
+    var o=document.getElementById("marqueebox"); 
+    o.innerHTML+=o.innerHTML; 
+    o.style.marginTop=0; 
+    o.onmouseover=function(){p=true;} 
+    o.onmouseout=function(){p=false;} 
+    function start(){ 
+        sh = o.offsetHeight; 
+        o.style.height = sh; 
+        t=setInterval(scrolling,speed); 
+        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+    } 
+    function scrolling(){ 
+        if(parseInt(o.style.marginTop)%lh!=0){ 
+            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
+        }else{ 
+            clearInterval(t); 
+            setTimeout(start,delay); 
+        } 
+    } 
+    setTimeout(start,delay); 
+} 
+</script> 
+
+<style type="text/css">
+#fontList,#ImgList2{/* 外面主框架的 宽 高值必须用户自己已定义 */
+  width:600px;
+  height:80px;
+  overflow:hidden;
+  margin-bottom:10px;
+ }
+.ImgWH{
+ float:left;
+ width:120px;
+ height:80px;
+ text-align:center;
+ color:#F00;
+ font-weight:800;
+ line-height:80px;
+}
+
+</style>
+<script type="text/javascript">
+function ImgScroll(obj){
+/************************************
+插件信息:
+ Name : ImgScroll
+ Version : 13.09.09
+ Author  : Lazy
+ E-mail  : 25565308@qq.com
+ Blog : http://www.111cn.net 
+参数说明:
+      id: 需要滚动窗口的 ID 值
+   width: 窗口 宽度
+     height: 窗口 高度
+     dir: 图片滚动方向,默认向左滚动
+   speed: 滚动速度,值越小越快
+ EventBingLeft: 向左滚动按钮ID
+EventBingRight: 向右滚动按钮ID
+其它说明:
+  目前本插件由于时间原因只支持左右无缝滚动,也是作者第一次尝试封装插件,
+  
+ 如不能正常引用该插件 请QQ或者E-mail 通知作者,也可自行修复
+ 
+ 本插件代码可以随意复制发布,但切勿用于商业用途
+ 
+ 转载时请保留本插件信息,谢谢
+                From:Lazy
+************************************/
+ this.prototype=obj;
+ this.obj={id:null,width:null,height:null,dir:"left",speed:30,EventBingLeft:null,EventBingRight:null};
+ this.extend(this.obj,obj);
+ try{this.Element=ImgGet(this.obj.id);}catch(err){}
+ if(this.obj.id==null|| !this.Element){alert("组件初始化失败,指定的ID值不存在!");return};
+ if(this.obj.width==null){this.obj.width=this.Element.offsetWidth;}
+ if(this.obj.height==null){this.obj.height=this.Element.offsetHeight;}
+ this.Initialization();//值 验证完成 初始化组件
+ this.Element.ImgScrollStatue=setInterval("StartScroll({id:'"+ this.obj.id +"',dir:'"+this.obj.dir+"'})",this.obj.speed);//启用滚动
+ this.EventBind(this.obj.EventBingName,this.obj.id,this.obj.speed);//绑定事件
+ }
+ImgScroll.prototype.EventBind=function(oId,id,speed){
+ // 事件绑定
+// if(oId==null){return}
+ this.Element.onmouseover=function(){
+  clearInterval(this.ImgScrollStatue);}// end onmouseover
+ this.Element.onmouseout=function(){
+  var o=this.ImgScrollProperty;
+  this.ImgScrollStatue=setInterval("StartScroll({id:'"+o.id+"',dir:'"+o.dir+"'})",o.speed);
+  }//end onmouseout
+ if(this.obj.EventBingLeft!=null && this.obj.EventBingLeft!=""){//绑定向左滑动代码
+  var Button=ImgGet(this.obj.EventBingLeft)
+  if(Button){
+    Button.onmouseover=function(){ ImgInterval(this);}//end Button.onmouseover
+    Button.onmousedown=function(){ ImgInterval(this);}//enf Button.onmousedown
+    Button.onmouseout=function(){ImgInterval(this);}//end Button.onmouseout
+    Button.onclick=function(){ImgInterval(this);}//end Button.onclick
+   }
+  }// end if
+ if(this.obj.EventBingRight!=null && this.obj.EventBingRight!=""){//绑定向左滑动代码
+  var Button=ImgGet(this.obj.EventBingRight)
+  if(Button){
+    Button.onmouseover=function(){ ImgInterval(this);}//end Button.onmouseover
+    Button.onmousedown=function(){ ImgInterval(this);}//enf Button.onmousedown
+    Button.onmouseout=function(){ImgInterval(this);}//end Button.onmouseout
+    Button.onclick=function(){ImgInterval(this);}//end Button.onclick
+   }
+  }// end if
+ }
+ImgScroll.prototype.Initialization=function(){
+ // 初始化 
+ var oDiv=document.createElement("div"),
+  oDiv1=document.createElement("div"),
+  oDiv2=document.createElement("div"),
+  oText=this.Element.innerHTML,
+  oDir=this.obj.dir=="left"||this.obj.dir=="right"?"float:left;":"clear:both;";
+  this.Element.innerHTML="";
+ oDiv.style.cssText="width:8000px;height:"+ this.obj.height +";margin:0;padding:0;";
+ oDiv1.style.cssText=oDir;oDiv2.style.cssText=oDir;
+ oDiv.appendChild(oDiv1);oDiv.appendChild(oDiv2);
+ oDiv1.innerHTML=oText;oDiv2.innerHTML=oText;
+ this.Element.appendChild(oDiv);
+ this.Element.ImgScrollProperty={id:this.obj.id,speed:this.obj.speed,dir:this.obj.dir};
+ //添加按钮事件属性
+ if(this.obj.EventBingLeft!=null && this.obj.EventBingLeft!=""){
+  ImgGet(this.obj.EventBingLeft).ImgScrollProperty={
+   id:this.obj.id,speed:this.obj.speed,dir:this.obj.dir=="left"||this.obj.dir=="right"?"left":"top"};}
+ if(this.obj.EventBingRight!=null && this.obj.EventBingRight!=""){
+  ImgGet(this.obj.EventBingRight).ImgScrollProperty={
+   id:this.obj.id,speed:this.obj.speed,dir:this.obj.dir=="left"||this.obj.dir=="right"?"right":"down"};}
+ }
+ImgScroll.prototype.extend=function(oo,ot){
+ if(typeof(oo)!="object" || typeof(ot)!="object"){return}
+ for(var p in oo){
+ if(oo.hasOwnProperty(p) && ot.hasOwnProperty(p)){
+  oo[p]=ot[p];}
+  }
+ }
+function StartScroll(oElement){
+ var oMain=ImgGet(oElement.id),oDiv;
+ if(oElement.dir=="left"||oElement.dir=="right"){
+   oDiv=oMain.getElementsByTagName("div")[0].getElementsByTagName("div")[0];}
+  else{oDiv=oMain.getElementsByTagName("div")[0];}
+ switch(oElement.dir){
+  case "right":
+   if(oMain.scrollLeft<=1){
+    oMain.scrollLeft=oDiv.offsetWidth}else{
+     oMain.scrollLeft--;}
+     break;//end right
+  default:
+   if(oMain.scrollLeft-oDiv.offsetWidth>=0){
+    oMain.scrollLeft=0;}else{
+     oMain.scrollLeft++;}//end defalut
+  }//end switch
+ }
+function ImgInterval(oObj){
+ if(typeof oObj!="object"){return;}
+ var oId,oDir,oSpeed ,
+ e=event.type||window.event.type,
+ o=oObj.ImgScrollProperty,obj=ImgGet(o.id);
+ clearInterval(obj.ImgScrollStatue);
+ oId=o.id;oDir=o.dir;oSpeed=o.speed;
+ switch(e){
+  case "click":
+   oSpeed=oSpeed/2;
+   break;
+  case"mouseout":
+   oDir=obj.ImgScrollProperty.dir;
+   break;
+  case"mousedown":
+   oSpeed=oSpeed/4;
+  }
+ obj.ImgScrollStatue=setInterval("StartScroll({id:'"+oId+"',dir:'"+oDir+"'})",oSpeed)
+ }
+function ImgGet(ObjId){
+ return document.getElementById(ObjId);}
+</script>
+
+</head>
+<body>
+<!-- logo-->
+<!-- <div id="header" class="center">
+	<h1 id="logo" class="notext"><a href="index.html">RiSAME</a></h1>
+	<div class="cl">&nbsp;</div>
+</div> -->
+<!-- end of logo -->
+
+<!-- shell -->
+<div class="shell">
+	
+	<!-- slider -->
+	<div id="slider">
+
+		<!-- left content -->
+		<div class="content">
+			<ul>
+			  <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+				  <div><h1 id="logo">
+					<a href="index.html">RiSAME</a>
+					</h1>
+					
+				  </div>
+			    	
+					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
+						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
+									
+		<div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
+<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
+<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
+                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
+                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
+          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
+                					
+						</div> 
+					</div><!-- 
+					<div id="fontList" style="float:left; width:800px"><marquee scrollamount="3">
+					<font style="font-weight:bold;font-size:20px;line-height:24px;color:#0000C6;font-family:'宋体'">Reseach in Software Analysis, Maintenance, and Evolution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reseach in Software Analysis, Maintenance, and Evolution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reseach in Software Analysis, Maintenance, and Evolution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reseach in Software Analysis, Maintenance, and Evolution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reseach in Software Analysis, Maintenance, and Evolution</font></marquee></div> -->
+			    </li>
+                
+			</ul>
+
+     </div>
+		<!-- end left content -->
+		
+		<!-- slider navigation -->
+		<!-- <div class="nav">
+			<a href="#" id="up" class="notext">&nbsp;</a>
+			<a href="#" id="down" class="notext">&nbsp;</a>
+		</div> -->
+		<!-- end slider navigation -->
+
+	</div>
+	<!-- end slider -->
+	
+	<!-- navigation -->
+	<div id="navigation">
+		<ul>
+		    <li><a href="index.html" class="active"><span>首页</span></a></li>
+		    <li><a href="member.html"><span>人员</span></a></li>
+		    <li><a href="project.html"><span>项目</span></a></li>
+		    <li><a href="publications.html"><span>成果</span></a></li>
+		    <li><a href="awards.html"><span>荣誉</span></a></li>
+		    <!-- <li><a href="cooperate.html"><span>合作</span></a></li> -->
+            <li><a href="links.html"><span>资源</span></a></li>
+		</ul>
+	</div>
+	<!-- end navigation -->
+	
+	<!-- main -->
+	<div id="main">
+		<!-- content -->
+		<div id="content" class="left">
+			
+			<div class="welcome">
+				<h2>RiSAME介绍</h2>
+				<p>RiSAME全称Reseach in Software Analysis, Maintenance, and Evolutoin。研究方向包括： 云、社交网络、众包、移动互联环境下的软件维护与演化、软件代码生成与补全、软件数据挖掘与智能化分析、软件测试与调试。</p>
+			</div>
+
+			<div class="news">
+				
+				<div class="news-item">
+					<span class="news-pointer">1</span>
+					<div class="news-body">
+						<h3>软件分析</h3>
+						<div class="cl">&nbsp;</div>
+						<p>软件数据包括代码、文档、软件演化历史数据、执行轨迹数据、软件在线讨论数据等。我们在软件分析方面的研究侧重于如何利用信息检索、数据挖掘、机器学习技术分析各种数据，为软件的维护和演化提供支撑。</p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			
+				<div class="news-item">
+					<span class="news-pointer">2</span>
+					<div class="news-body">
+						<h3>软件维护</h3>
+						<div class="cl">&nbsp;</div>
+						<p>软件维护包括修改前的修改分析和预测、修改过程中的修改实施、修改后的验证等。在软件维护方面，我们侧重于如何分析当前修改请求，为开发人员提供关于当前修改请求的建议，使得软件维护变得简单、高效。</p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				
+				<div class="news-item">
+					<span class="news-pointer">3</span>
+					<div class="news-body">
+						<h3>软件演化</h3>
+						<div class="cl">&nbsp;</div>
+						<p>软件演化是由一系列的软件维护活动构成。在软件演化方面，我们侧重于软件演化质量、演化规律的研究，为管理人员或者开发人员报告软件演化的状态，使得软件演化表的更加可信。</p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+			
+			</div>
+			
+				<div id="ImgList2">
+					 <div class="ImgWH Img1"><img src="css\scenery\1.gif" width=120 height=80></div>
+					 <div class="ImgWH Img2"><img src="css\scenery\2.gif" width=120 height=80></div>
+					 <div class="ImgWH Img3"><img src="css\scenery\3.jpg" width=120 height=80></div>
+					 <div class="ImgWH Img4"><img src="css\scenery\4.jpg" width=120 height=80></div>
+					 <div class="ImgWH Img5"><img src="css\scenery\5.jpg" width=120 height=80></div>
+					 <div class="ImgWH Img6"><img src="css\scenery\6.jpg" width=120 height=80></div>
+					 <div class="ImgWH Img7"><img src="css\scenery\7.jpg" width=120 height=80></div>
+					 <div class="ImgWH Img8"><img src="css\scenery\8.jpg" width=120 height=80></div>
+				 </div>	
+		</div>
+
+		
+		<!-- right -->
+		<div id="sidebar" class="right">
+			
+			<!-- blog roll -->
+			<div class="blog-roll">
+				<a href="#" class="rss-feed notext">&nbsp;</a>
+				<h2>征文通知</h2>
+				<div class="cl">&nbsp;</div>
+				
+				
+				<div class="blog-item">
+					<h4><a href="https://www.icse2018.org//">ICSE 2018</a></h4>
+					<span class="blog-date">Deadline: Aug 25, 2017</span>
+					<p>ICSE 2018, Gothenburg, Sweden </p>
+				</div>
+				
+				<div class="blog-item">
+					<h4><a href="http://saner.unimol.it/index.php">SANER 2018</a></h4>
+					<span class="blog-date">Deadline: Oct 20, 2017</span>
+					<p>SANER 2018,  University of Molise in Campobasso, Ital</p>
+				</div>
+
+				<div class="blog-item">
+					<h4><a href="https://conf.researchr.org/home/fse-2018">FSE 2018</a></h4>
+					<span class="blog-date">Deadline: 2018-03-09</span>
+					<p>FSE 2018, Lake Buena Vista, Florida, USA</p>
+				</div>
+
+				<div class="blog-item">
+					<h4><a href="http://www.ase2018.com/">ASE 2018</a></h4>
+					<span class="blog-date">Deadline: 2018-04-26</span>
+					<p>ASE 2018, Montpellier, France from September 3 to 7, 2018.</p>
+				</div>
+
+				<div class="blog-item">
+					<h4><a href="https://www.computer.org/web/compsac2018/home "> COMPSAC 2018</a></h4>
+					<span class="blog-date">Deadline: 15 January 2018</span>
+					<p> COMPSAC 2018,Tokyo, Japan</p>
+				</div>
+
+                                <div class="blog-item">
+					<h4><a href="https://icsme2018.github.io/"> ICSME 2018</a></h4>
+					<span class="blog-date">Deadline: 2018-03-30</span>
+					<p> ICSME 2018, Madrid, Spain, September 23-29, 2018</p>
+				</div>
+
+                                <div class="blog-item">
+					<h4><a href="https://conf.researchr.org/home/icpc-2018"> ICPC 2018</a></h4>
+					<span class="blog-date">Deadline: 2018-02-06</span>
+					<p> Gothenburg, Sweden, May 27-28 2018</p>
+				</div>
+
+			</div>
+			<!-- end blog roll -->
+							
+			<!-- contact -->
+			<div class="contact">
+				<h2>联系方式</h2>
+				<p>名称：RiSAME</br> 
+                   联系方式:
+                   邮箱: xbsun@yzu.edu.cn</br>
+                   地址：扬州大学电工电子实验中心S302</p>
+			</div>
+			<!-- end contact -->
+			
+		</div>
+		<!-- end right-->
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<p class="left">
+			<a href="http://www.yzu.edu.cn">扬州大学</a>
+			<span>|</span>
+			<a href="http://xxgcxy.yzu.edu.cn/">扬州大学信息工程学院</a>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253524161'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253524161%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+          
+		</p>
+		<!-- <p class="right">
+			&copy; Design by hansguo</a>
+		</p> -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end shell -->
+<script type="text/javascript" charset="utf-8">
+	Cufon.now();
+</script>
+<script type="text/javascript">
+window.onload=function(){
+ new ImgScroll({
+  id:"ImgList2",
+  speed:10});
+ }
+</script>
+</body>
+<script type="text/javascript">
+startmarquee(1118,200,-100); 
+</script> 
+</html>

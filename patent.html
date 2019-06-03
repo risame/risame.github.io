@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function startmarquee(lh,speed,delay) { 
+    var p=false; 
+    var t; 
+    var sh; 
+    var o=document.getElementById("marqueebox"); 
+    o.innerHTML+=o.innerHTML; 
+    o.style.marginTop=0; 
+    o.onmouseover=function(){p=true;} 
+    o.onmouseout=function(){p=false;} 
+    function start(){ 
+        sh = o.offsetHeight; 
+        o.style.height = sh; 
+        t=setInterval(scrolling,speed); 
+        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+    } 
+    function scrolling(){ 
+        if(parseInt(o.style.marginTop)%lh!=0){ 
+            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
+        }else{ 
+            clearInterval(t); 
+            setTimeout(start,delay); 
+        } 
+    } 
+    setTimeout(start,delay); 
+} 
+</script> 
+</head>
+<body>
+<!-- logo-->
+<!-- <div id="header" class="center">
+	<h1 id="logo" class="notext"><a href="index.html">RiSAME</a></h1>
+	<div class="cl">&nbsp;</div>
+</div> -->
+<!-- end of logo -->
+
+<!-- shell -->
+<div class="shell">
+	
+	<!-- slider -->
+	<div id="slider">
+
+		<!-- left content -->
+		<div class="content">
+			<ul>
+			  <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+				  <div><h1 id="logo">
+					<a href="index.html">RiSAME</a>
+					</h1>
+					
+				  </div>
+			    	
+					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
+						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
+									<div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
+<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
+<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
+                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
+                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
+          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
+                 					
+						</div> 
+					</div>
+			    </li>
+                
+			</ul>
+
+     </div>
+		<!-- end left content -->
+		
+		<!-- slider navigation -->
+		<!-- <div class="nav">
+			<a href="#" id="up" class="notext">&nbsp;</a>
+			<a href="#" id="down" class="notext">&nbsp;</a>
+		</div> -->
+		<!-- end slider navigation -->
+
+	</div>
+	<!-- end slider -->
+	
+	<!-- navigation -->
+	<div id="navigation">
+		<ul>
+	        <li><a href="index.html" class="active"><span>首页</span></a></li>
+		    <li><a href="member.html"><span>人员</span></a></li>
+		    <li><a href="project.html"><span>项目</span></a></li>
+		    <li><a href="publications.html"><span>成果</span></a></li>
+		    <li><a href="awards.html"><span>荣誉</span></a></li>
+		    <!-- <li><a href="cooperate.html"><span>合作</span></a></li> -->
+            <li><a href="links.html"><span>资源</span></a></li>
+		</ul>
+	</div>
+	<div id="navigation1">
+		<ul>
+	        <li><a href="publications.html" class="active"><span>论文</span></a></li>
+		    <li><a href="patent.html"><span>专利</span></a></li>
+		    <li><a href="copyright.html"><span>软件著作权</span></a></li>
+		</ul>
+	</div>
+	<!-- end navigation -->
+	
+	<!-- main -->
+	<div id="main">
+		<!-- content -->
+		<div id="content" class="left">
+
+			<div class="news">
+				
+				
+                
+                <div class="news-item" >
+					<div class="news-body" style="width:950px">
+                    <h3>专利</h3>
+						<div class="cl">&nbsp;</div>
+						<p>
+                           <p align="justify">
+  
+<font face="Times New Roman" size="2">[1] 一种基于协相关主题模型的面向软件修改的个性化任务推荐方法. 2014,公开日：2015.03.25，公开号：CN104461558A. 授权号：ZL 2014 1 0804898.8，授权日：2017.6.23. </font><p align="justify">  
+<font face="Times New Roman" size="2">[2]	 基于web网页资源的程序代码缩略词的自动扩充方法. 2014,公开日：2015.01.21，公开号：CN104298752A. 授权号：ZL 2014 1 0543730.6，授权日：2017.8.8.</font><p align="justify">  
+<font face="Times New Roman" size="2">[3]	  一种面向对象程序的注释质量评价和注释建议方法. 2014,公开日：2014.10.29，公开号：CN104123273A. 授权号：ZL 2014 1 0355299.2，授权日：2017.6.6. </font><p align="justify">  
+<font face="Times New Roman" size="2">[4]  一种基于动态主题模型的软件演化建模方法. 2014,公开日：2014.10.8，公开号：CN104090775A. 授权号：ZL 2014 1 0355483.7，授权日：2017.5.3.</font><p align="justify">  
+<font face="Times New Roman" size="2">[5]  一种基于LDA主题模型的相关软件历史数据提取方法. 2014,公开日：2014.4.16，公开号：CN103729473A. 授权号：ZL 2014 1 0029273.9，授权日：2016.11.9. </font><p align="justify">
+<font face="Times New Roman" size="2">[6]	  一种生成包图的Java程序包概要化方法.  2014,公开日：2014.4.9，公开号：CN103713909A. 授权号：ZL 2014 1 0028973.6，授权日：2017.1.18. </font><p align="justify">
+<font face="Times New Roman" size="2">[7] 	  一种基于LDA模型的多粒度层次软件聚类方法.  2014,公开日：2014.4.16，公开号：CN103729197A. 授权号：ZL 2014 1 002928677.6，授权日：2016.11.9.</font><p align="justify">
+<font face="Times New Roman" size="2">[8]	 一种基于LDA模型和PageRank算法的程序接口自动推荐的方法. 2014,  公开日：2014.07.16，公开号：CN103927177A.</font><p align="justify">
+<font face="Times New Roman" size="2">[9] 	  基于多源软件数据分析的特征定位方法.  2014,公开日：2014.4.16，公开号：CN103744788A，授权号：ZL 2014 1 0031303.X，授权日：2016.8.31.</font><p align="justify">
+<font face="Times New Roman" size="2">[10]	一种基于形式概念分析的回归测试方法.已授权，授权公告日：2015.7.15，公开号：CN103123607A. 授权号: ZL 2013 1 0074962.7.2015. </font><p align="justify">
+<font face="Times New Roman" size="2">[11]	一种基于概念格的软件多错误定位方法. 已授权，授权公告日：2015.5.27，公开号：CN103176902A. 授权号: ZL 2013 1 0074961.2. 2015.  </font><p align="justify">
+<font face="Times New Roman" size="2">[12]	一种基于层次切片的回归测试用例选择技术.已授权,授权号：ZL 2010 1 0173787.3 ,2012,中国.  </font><p align="justify">
+<font face="Times New Roman" size="2">[13]	一种基于形式概念分析的软件维护技术.公开日：2012.6.20，公开号：CN102508767A. 2012. 已授权. 授权号: ZL 2011 1 0300267.9  </font><p align="justify">
+<font face="Times New Roman" size="2">[14]	一种基于修改影响分析的部件软件回归测试用例更新方法.已授权, 授权号: ZL 2012 1 0303829.X.  </font><p align="justify">
+<font face="Times New Roman" size="2">[15]	 一种基于修改影响分析的回归测试用例生成方法, 授权号: ZL 2012 1 0270343.0，公开（公告）日: 2015.04.08.  </font><p align="justify">
+<font face="Times New Roman" size="2">[16]	 	  一种基于层次主题模型的程序特征树的生成方法. 2014,公开日：2014.07.16，公开号：CN103927176A. 授权号：ZL 2014 1 0156738.7，授权日：2017.2.22.</font><p align="justify">  
+<font face="Times New Roman" size="2">[17]	 一种基于LDA模型和PageRank算法的程序接口自动推荐的方法. 2014,公开日：2014.07.16，公开号：CN103927177A. 授权号：ZL 2014 1 0156746.1，授权日：2017.1.25. </font><p align="justify">  
+<font face="Times New Roman" size="2">[18]	 一种基于WordNet的程序可读性分析方法. 2014,公开日：2014.07.16，公开号：CN103927179A. 授权号：ZL 2014 1 0157340.5，授权日：2017.2.15. </font><p align="justify">  
+ 
+ 
+<font face="Times New Roman" size="2">[19]	 一种面向代码修改的概要及标签自动生成技术. 2015,公开日：2015.10.21，公开号：CN104991858A. 授权号：ZL 2015 1 0325268.7，授权日：2017.10.20. </font><p align="justify">
+ 
+<font face="Times New Roman" size="2">[20]	一种基于相关主题模型的程序理解和特征定位方法. 2015,公开日：2015.04.29，公开号：CN104572111A. 授权号：ZL 2015 1 0027127.7，授权日：2017.12.1. </font>
+<p align="justify">   
+ 
+<font face="Times New Roman" size="2">[21]	一种针对具体软件历史代码库的词库自动构建方法. 2015,公开日：2015.10.21，公开号：CN104991909A.  授权号：ZL 2015 1 0345253.7，授权日：2018.2.27 </font><p align="justify">   	
+
+
+ 
+<font face="Times New Roman" size="2">[22]	一种基于StackOverflow和commit库的bug定位方法. 2016 . 授权号：ZL 2016 1 0824966.6，授权日：2018.12.11 </font><p align="justify">   	
+
+
+ 
+<font face="Times New Roman" size="2">[23]	面向软件修改的风险分析方法 2016. 授权号：ZL 2016 1 0486067.X，授权日：2018.11.23 </font><p align="justify">   	
+
+
+ 
+<font face="Times New Roman" size="2">[24]	一种bug、commit、相关人员关系建立方法. 2016. 公开号：CN105718376B.  授权号：ZL 2016 1 0093332.8，授权日：2018.9.25 </font><p align="justify">   	
+
+
+ 
+<font face="Times New Roman" size="2">[25]	一种基于众包的软件开发问题自动应答方法. 2015. 公开号：CN105117398A.  授权号：ZL 2015 1 0366322.6，授权日：2018.10.26 </font><p align="justify">  
+<p align="justify">   	
+
+
+                        </p>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+                
+                
+			
+			</div>
+			
+					
+		</div>
+
+		
+		<!-- right -->
+		<div id="sidebar" class="right">
+			
+			<!-- blog roll -->
+			
+			<!-- end blog roll -->
+							
+			<!-- contact -->
+		
+			<!-- end contact -->
+			
+		</div>
+		<!-- end right-->
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<p class="left">
+			<a href="http://www.yzu.edu.cn">扬州大学</a>
+			<span>|</span>
+			<a href="http://xxgcxy.yzu.edu.cn/">扬州大学信息工程学院</a>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253524161'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253524161%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            <!-- <span>|</span>
+            			<a href="http://keysoftlab.nju.edu.cn">软件新技术国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.ios.ac.cn">计算机科学国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sklse.whu.edu.cn">软件工程国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.nlsde.buaa.edu.cn/">软件开发环境国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sei.pku.edu.cn/">北京大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://www.se.fudan.edu.cn">复旦大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://ise.seu.edu.cn/"> 东南大学软件工程研究所 </a> -->       
+		</p>
+		<!-- <p class="right">
+			&copy; Design by hansguo</a>
+		</p> -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end shell -->
+<script type="text/javascript" charset="utf-8">
+	Cufon.now();
+</script>
+</body>
+<script type="text/javascript">
+startmarquee(1118,200,-100); 
+</script> 
+</html>

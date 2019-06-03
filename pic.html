@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color:transparent;
+        }
+        div{
+            width:350px;
+            overflow:hidden;
+        }
+        table img{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="picScroll">
+        <table>
+            <tr>
+                <td><a><img src="../pic/1.jpg" /></a></td>
+                <td><a><img src="../pic/2.jpg"></a></td>
+                <td><a><img src="../pic/3.jpg"></a></td>
+                <td><a><img src="../pic/4.jpg"></a></td>
+                <td><a><img src="../pic/5.jpg"></a></td>
+            </tr>
+        </table>
+    </div>
+</body> 
+<script>
+    var target = $('#picScroll');
+    var left = 0;
+    var speed = 30;
+    function Marqeen() {
+        if (target[0].offsetWidth <= left) {
+            left -= target[0].offsetWidth;
+        }
+        else {
+            left++;
+        }
+        target.scrollLeft(left);
+    }
+    $(function () {
+        var marQueen = window.setInterval(Marqeen, speed);
+        target.mouseover(function () {
+            clearInterval(marQueen);
+        });
+        target.mouseout(function () {
+            marQueen = window.setInterval(Marqeen, speed);
+        });
+    });
+ 
+</script>
+</html>
+

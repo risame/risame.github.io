@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link href="css/style1.css" type="text/css"  rel="stylesheet" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function startmarquee(lh,speed,delay) { 
+    var p=false; 
+    var t; 
+    var sh; 
+    var o=document.getElementById("marqueebox"); 
+    o.innerHTML+=o.innerHTML; 
+    o.style.marginTop=0; 
+    o.onmouseover=function(){p=true;} 
+    o.onmouseout=function(){p=false;} 
+    function start(){ 
+        sh = o.offsetHeight; 
+        o.style.height = sh; 
+        t=setInterval(scrolling,speed); 
+        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+    } 
+    function scrolling(){ 
+        if(parseInt(o.style.marginTop)%lh!=0){ 
+            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
+            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
+        }else{ 
+            clearInterval(t); 
+            setTimeout(start,delay); 
+        } 
+    } 
+    setTimeout(start,delay); 
+} 
+</script> 
+</head>
+<body>
+
+
+<!-- logo-->
+<!-- <div id="header" class="center">
+	<h1 id="logo" class="notext"><a href="index.html">RiSAME</a></h1>
+	<div class="cl">&nbsp;</div>
+</div> -->
+<!-- end of logo -->
+
+<!-- shell -->
+<div class="shell">
+	
+	<!-- slider -->
+	<div id="slider">
+
+		<!-- left content -->
+		<div class="content">
+			<ul>
+			  <li><img src="css/images/logo.jpg" alt="" class="slide-image" />
+				  <div><h1 id="logo">
+					<a href="index.html">RiSAME</a>
+					</h1>
+					
+				  </div>
+			    	
+					<div  class="text-container" style="overflow: hidden; height: 150px; margin-left: 5px;"> 
+						<div id="marqueebox" style="margin-top: -48px; height: 100px;"> 
+									<div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
+<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
+<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
+                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
+                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
+          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
+                					</div> 
+					</div>
+			    </li>
+                
+			</ul>
+
+     </div>
+		<!-- end left content -->
+		
+		<!-- slider navigation -->
+		<!-- <div class="nav">
+			<a href="#" id="up" class="notext">&nbsp;</a>
+			<a href="#" id="down" class="notext">&nbsp;</a>
+		</div> -->
+		<!-- end slider navigation -->
+
+	</div>
+	<!-- end slider -->
+	
+	<!-- navigation -->
+	<div id="navigation">
+		<ul>
+		    <li><a href="index.html" class="active"><span>首页</span></a></li>
+		    <li><a href="member.html"><span>人员</span></a></li>
+		    <li><a href="project.html"><span>项目</span></a></li>
+		    <li><a href="publications.html"><span>成果</span></a></li>
+		    <li><a href="awards.html"><span>荣誉</span></a></li>
+		    <!-- <li><a href="cooperate.html"><span>合作</span></a></li> -->
+            <li><a href="links.html"><span>资源</span></a></li>
+		</ul>
+	</div>
+	<!-- end navigation -->
+	
+	<!-- main -->
+	<div id="main">
+		<!-- content -->
+		<div id="welcome" class="left">
+			<div class="contact">
+				<h2>工具</h2>
+					<div class="flash4">
+						<ul>
+							<li>
+								<div class="imgTop"><img src="images/tuijian1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">开发者个性化推荐技术的研究</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">开发者推荐</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+							<li>
+								<div class="imgTop"><img src="images/ciku1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">具体软件历史代码库的词库自动构建方案与工具实现</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">代码词库构建</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+							<li>
+								<div class="imgTop"><img src="images/mianxiang1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">面向多源数据的软件缺陷领域的命名实体识别平台</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">软件缺陷</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+							<li>
+								<div class="imgTop"><img src="images/zhishi1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">基于知识图谱的bug问题搜索系统</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">知识图谱</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+							<li>
+								<div class="imgTop"><img src="images/fig1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">基于GitHub的个性化软件仓库推荐系统</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">软件仓库</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+							<li>
+								<div class="imgTop"><img src="images/zidong1.png" width="538" height="405"  alt=""/></div>
+								<div class="imgCen">面向软件开发领域的词库自动构建平台</div>
+								<div class="imgBot"><a href="implementation.html"><p class="bt_1">代码词库构建</p><p class="bt_2"><span>点击查看工具界面</span></p></a></div>
+							</li>
+						</ul>	
+					</div>
+					<script src="js/script.js" type="text/javascript"></script>
+
+	            <p class="MsoNormal" align="justify">
+			</div>
+				
+           <div class="contact">
+				<h2 >实验数据</h2>
+				<span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="http://www.csdn.net"><font color="#000000">CSDN</font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+
+                <span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="http://www.google.com/codesearch"><font color="#000000">
+	            Google Code Search</font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+
+                <span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="http://best-java-source.whyandhow.org/java-cn/list/900500200/2/Code-Analyzers.shtml"><font color="#000000">
+	            Code Analysis Tools</font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+
+
+                <span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="http://web.engr.illinois.edu/~taoxie/sefamily.htm"><font color="#000000">
+	            Software Engineering Academic Genealogy (by Tao Xie) </font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+
+
+                <span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="http://web.engr.illinois.edu/~taoxie/advice/"><font color="#000000">
+	            Advice for Researchers and Students (by Tao Xie) </font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+
+                <span lang="EN-US" style="font-family: Times New Roman"><font face="Times New Roman" size="4" color="#3366FF">
+	              <a href="ccf.pdf"><font color="#000000">
+	            Journals and Conferences recommended by CCF</font></a></font><font face="Times New Roman" size="4">
+	            </span></p>
+	            <p class="MsoNormal" align="justify">
+			</div>
+		<div class="contact">
+			<table width="960" border="0"  bordercolor="#000000">   
+				<tr> 
+					<td width="100"><h2>顶级会议</h2></td> 
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>International Conference on Software Engineering</td>  
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM SIGSOFT Symposium on the Foundation of Software Engineering/ European Software Engineering</td> 
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>Conference on Object-Oriented Programming Systems,Languages, and Applications</td>   
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM SIGPLAN Symposium on Programming Language Design & Implementation</td>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</td>   
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>International Conference on Automated Software Engineering</td>   
+				</tr>  
+				<tr>      
+					<td align="center">B</td>     
+					<td>European Conference on Object-Oriented Programming</td>   
+				</tr>    
+				<tr>      
+					<td align="center">B</td>     
+					<td>International Symposium on Software Reliability Engineering</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>European Joint Conferences on Theory and Practice of Software</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>IEEE International Conference on Program Comprehension</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>IEEE International Requirement Engineering Conference</td>   
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>International. Conference on Software Maintenance and Evolution</td>   
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>International Symposium on Software Testing and Analysi</td>
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>International Conference on Software Analysis, Evolution, and Reengineering</td>
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>Fundamental Approaches to Software Engineering Conference </td>
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>International Conference on Ealuation and Assessment in Software Enginnering</td>
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>The IEEE International Conference on Software Testing, Verification and Validation</td>
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>Symposium On Applied Computing</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>ACMSIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>Asian Symposium on Programming Languages and Systems</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>Asia-Pacific Software Engineering Conference</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Computer Software and Applications </td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>IEEE International Working Conference on Source Code Analysis and Manipulation </td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Conference on Software  Quality， Reliability, and Security</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Conference on Software Engineering and Knowledge Engineering</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Conference on Software Reuse</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Symposium on Theoretical Aspects of Software Engineering</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>International Symposium on Empirical Software Engineering and Measurement</td>
+				</tr>
+			</table>
+
+			</div>
+		<div class="contact">
+			<table width="960" border="0"  bordercolor="#000000">   
+				<tr>
+					<td><h2>期刊分类</h2></td>   
+				</tr>   
+				<tr>      
+					<td align="center">A</td>     
+					<td>IEEE TRANSACTIONS ON SOFTWARE ENGINEERING</td>  
+				</tr>   
+				<tr>       
+					<td align="center">A</td>     
+					<td>COMMUNICATIONS OF THE ACM</td>   
+				</tr>    
+				<tr>      
+					<td align="center">A</td>     
+					<td>JOURNAL OF THE ACM</td>   
+				</tr>    
+				<tr>      
+					<td align="center">A</td>     
+					<td>COMPUTER</td>   
+				</tr>  
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM Computing Survey</td>   
+				</tr>
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM TRANSACTIONS ON PROGRAMMING LANGUAGES AND SYSTEMS</td>   
+				</tr>
+				<tr>      
+					<td align="center">A</td>     
+					<td>ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>IEEE TRANSACTIONS ON SERVICES COMPUTING</td>   
+				</tr>  
+				<tr>      
+					<td align="center">B</td>     
+					<td>IEEE TRANSACTIONS ON RELIABILITY</td>   
+				</tr>  
+				<tr>      
+					<td align="center">B</td>     
+					<td>Science China Information Science</td> 
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>information science</td> 
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>information system</td> 
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>IEEE SOFTWARE</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>INFORMATION AND SOFTWARE TECHNOLOGY</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>AUTOMATED SOFTWARE ENGINEERING</td>   
+				</tr>   
+				<tr>      
+					<td align="center">B</td>     
+					<td>JOURNAL OF SOFTWARE-EVOLUTION AND PROCESS</td>   
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>SOFTWARE AND SYSTEMS MODELING</td>   
+				</tr> 
+				<tr>      
+					<td align="center">B</td>     
+					<td>EMPIRICAL SOFTWARE ENGINEERING</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>JOURNAL OF SYSTEMS AND SOFTWARE</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>REQUIREMENTS ENGINEERING</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>SOFTWARE TESTING VERIFICATION & RELIABILITY</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>SOFTWARE-PRACTICE & EXPERIENCE</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>SOFTWARE QUALITY JOURNAL</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>COMPUTER JOURNAL</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>IET SOFTWARE</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td> SCIENCE OF COMPUTER PROGRAMMING</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY</td>   
+				</tr>
+				<tr>      
+					<td align="center">B</td>     
+					<td>ADVANCES IN COMPUTERS</td>   
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>ADVANCES IN ENGINEERING SOFTWARE</td>   
+				</tr> 
+				<tr>      
+					<td align="center">C</td>     
+					<td>COMPUTER LANGUAGES SYSTEMS & STRUCTURES</td>   
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>COMPUTER SCIENCE AND INFORMATION SYSTEMS</td>
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>INTERNATIONAL JOURNAL OF SOFTWARE ENGINEERING AND KNOWLEDGE ENGINEERING</td>   
+				</tr>
+				<tr>      
+					<td align="center">C</td>     
+					<td>Frontier of computer science</td> 
+				</tr>
+			</table>
+		</div>	
+		
+
+		
+		<!-- right -->
+		<div id="sidebar" class="right">
+			
+			<!-- blog roll -->
+			
+			<!-- end blog roll -->
+							
+			<!-- contact -->
+		
+			<!-- end contact -->
+			
+		</div>
+		<!-- end right-->
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<p class="left">
+			<a href="http://www.yzu.edu.cn">扬州大学</a>
+			<span>|</span>
+			<a href="http://xxgcxy.yzu.edu.cn/">扬州大学信息工程学院</a>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253524161'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253524161%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            <!-- <span>|</span>
+            			<a href="http://keysoftlab.nju.edu.cn">软件新技术国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.ios.ac.cn">计算机科学国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sklse.whu.edu.cn">软件工程国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.nlsde.buaa.edu.cn/">软件开发环境国家重点实验室</a>
+            <span>|</span>
+            			<a href="http://www.sei.pku.edu.cn/">北京大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://www.se.fudan.edu.cn">复旦大学软件工程研究所</a>
+            <span>|</span>
+            			<a href="http://ise.seu.edu.cn/"> 东南大学软件工程研究所 </a> -->       
+		</p>
+		<!-- <p class="right">
+			&copy; Design by hansguo</a>
+		</p> -->
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end shell -->
+<script type="text/javascript" charset="utf-8">
+	Cufon.now();
+</script>
+</body>
+<script type="text/javascript">
+startmarquee(1118,200,-100); 
+</script> 
+</html>
