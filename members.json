@@ -11,7 +11,7 @@
     {"name":"陆金婷", "education":"2018级硕士研究生", "field": "知识图谱问答", "avatar":"assets/images/members/jinting.lu.png", "link": ""},
     {"name":"陈天浩", "education":"2018级硕士研究生", "field": "缺陷定位", "avatar":"assets/images/members/tianhao.chen.png", "link": ""},
     {"name":"余笙", "education":"2018级硕士研究生", "field": "事件推理", "avatar":"assets/images/members/sheng.yu.png", "link": ""},
-    {"name":"徐勇", "education":"2018级硕士研究生", "field": "事件推理", "avatar":"assets/images/members/yong.xu.png", "link": ""},
+    {"name":"徐勇", "education":"2018级硕士研究生", "field": "代码自动生成", "avatar":"assets/images/members/yong.xu.png", "link": ""},
     {"name":"曹思聪", "education":"2019级硕士研究生", "field": "安全性缺陷分析", "avatar":"assets/images/members/sicong.cao.png", "link": ""},
     {"name":"李越", "education":"2019级硕士研究生", "field": "安全性缺陷分析与测试", "avatar":"assets/images/members/yue.li.png", "link": ""},
     {"name":"唐奔", "education":"2019级硕士研究生", "field": "代码自动生成", "avatar":"assets/images/members/ben.tang.png", "link": ""},
