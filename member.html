@@ -212,7 +212,8 @@ var app = new Vue({
   },
   created: function () {
     var _this = this
-    var membersUrl = 'https://raw.githubusercontent.com/risame/risame.github.io/gh-pages/members.json'
+    // var membersUrl = 'https://raw.githubusercontent.com/risame/risame.github.io/master/members.json'
+    var membersUrl = '/members.json'
     axios.get(membersUrl).then(function (res) {
         console.log(res)
         _this.members = res.data
