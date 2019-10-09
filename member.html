@@ -213,7 +213,9 @@ var app = new Vue({
   created: function () {
     var _this = this
     // var membersUrl = 'https://raw.githubusercontent.com/risame/risame.github.io/master/members.json'
-    var membersUrl = '/members.json'
+    refreshInterval = 60  // seconds
+    var _t = parseInt(Date.now() / 1000 / refreshInterval)
+    var membersUrl = '/members.json?_t=' + _t
     axios.get(membersUrl).then(function (res) {
         console.log(res)
         _this.members = res.data
