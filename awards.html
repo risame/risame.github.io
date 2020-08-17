@@ -11,6 +11,12 @@
 	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <!-- added by aponder START -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+	<!-- added by aponder END -->
+	
 <script type="text/javascript">
 function startmarquee(lh,speed,delay) { 
     var p=false; 
@@ -49,7 +55,7 @@ function startmarquee(lh,speed,delay) {
 <!-- end of logo -->
 
 <!-- shell -->
-<div class="shell">
+<div class="shell" id="app">
 	
 	<!-- slider -->
 	<div id="slider">
@@ -117,28 +123,7 @@ function startmarquee(lh,speed,delay) {
 					<div class="news-body" style="width:950px">
                     <h3>孙小兵</h3>
 						<div class="cl">&nbsp;</div>
-						<p>
-                            
-  <font face="Times New Roman" size="2">江苏省“333”工程中青年科学技术带头人，2018</font><p align="justify"> 
-  <font face="Times New Roman" size="2">江苏省优秀专业学位硕士学位论文指导老师，2018</font><p align="justify"> 
-<font face="Times New Roman" size="2">江苏省优秀毕业设计二等奖指导老师，2018</font><p align="justify"> 
-<font face="Times New Roman" size="2">扬州市科学技术奖一等奖，2018</font><p align="justify"> 
-
- <font face="Times New Roman" size="2">
-江苏省“双创人才”计划，  2017</font><p align="justify"> 
-
- <font face="Times New Roman" size="2">
-江苏省高校“青蓝工程”培养对象，  2016</font><p align="justify"> 
-  <font face="Times New Roman" size="2">
-中国商业联合会科学技术奖三等奖， 2015</font><p align="justify"> 
- <font face="Times New Roman" size="2">
-扬州大学优秀毕业设计团队指导老师， 2015</font><p align="justify">  
- <font face="Times New Roman" size="2">教育部自然科学二等奖，2014</font><p align="justify">  
-<font face="Times New Roman" size="2">扬州大学“新世纪人才工程”培养对象优秀青年骨干教师，2014 </font><p align="justify">  
-<font face="Times New Roman" size="2">扬州大学科技先锋，2013 </font><p align="justify"> 
-<font face="Times New Roman" size="2">扬州大学优秀毕业设计指导老师，2013</font><p align="justify">  
-
-                        </p>
+						<p v-for="(award, index) in awards.sunxiaobin"><font face="Times New Roman" size="2">{{award}}</p>
 					</div>
 					<div class="cl">&nbsp;</div>
 				</div>
@@ -238,5 +223,36 @@ function startmarquee(lh,speed,delay) {
 </body>
 <script type="text/javascript">
 startmarquee(1118,200,-100); 
-</script> 
+</script>
+
+
+<script>
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+		awards: {
+			sunxiaobin: [
+				"江苏省第十六批“六大人才高峰”高层次人才，2019",
+				"江苏省计算机学会青年科技奖，2019",
+				"江苏省“333”工程中青年科学技术带头人，2018",
+				"江苏省优秀专业学位硕士学位论文指导老师，2018",
+				"江苏省优秀毕业设计二等奖指导老师，2018",
+				"扬州市科学技术奖一等奖，2018",
+				"江苏省“双创人才”计划， 2017",
+				"江苏省高校“青蓝工程”培养对象， 2016",
+				"中国商业联合会科学技术奖三等奖， 2015",
+				"扬州大学优秀毕业设计团队指导老师， 2015",
+				"教育部自然科学二等奖，2014",
+				"扬州大学“新世纪人才工程”培养对象优秀青年骨干教师，2014",
+				"扬州大学科技先锋，2013",
+				"扬州大学优秀毕业设计指导老师，2013",
+			]
+		}
+	  },
+	  created: function () {
+	  },
+	  computed: {
+	  }
+	})
+	</script>
 </html>

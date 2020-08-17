@@ -11,6 +11,11 @@
 	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- added by aponder START -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+	<!-- added by aponder END -->
+	
 <script type="text/javascript">
 function startmarquee(lh,speed,delay) { 
     var p=false; 
@@ -49,7 +54,7 @@ function startmarquee(lh,speed,delay) {
 <!-- end of logo -->
 
 <!-- shell -->
-<div class="shell">
+<div class="shell" id="app">
 	
 	<!-- slider -->
 	<div id="slider">
@@ -119,7 +124,14 @@ function startmarquee(lh,speed,delay) {
 		<div id="content" class="left">
 
 			<div class="news">
-				
+				<div class="news-item" v-for="(_, year) in publications">
+						<div class="news-body" style="width:950px">
+							<h3>{{year}}</h3>
+							<div class="cl">&nbsp;</div>
+							<p v-for="(publication, index) in _"><font face="Times New Roman" size="2">[{{1+index}}] {{publication}}</font></p>
+						</div>
+						<div class="cl">&nbsp;</div>
+				</div>
 
 <div class="news-item" >
 					<div class="news-body" style="width:950px">
@@ -454,4 +466,24 @@ function startmarquee(lh,speed,delay) {
 <script type="text/javascript">
 startmarquee(1118,200,-100); 
 </script> 
+
+
+<script>
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+		publications: {
+			2020: [
+				"Zhen Ni, Bin Li, Xiaobing Sun, Tianhao Chen, Ben Tang, Xinchen Shi. Analyzing bug fix for automatic bug cause classification. Journal of Systems and Software, 2020, 142: 110538",
+				"Cheng Zhou, Bin Li, Xiaobing Sun. Improving software bug-specific named entity recognition with deep neural network. Journal of Systems and Software, 2020, 165: 110572 ",
+				"Xiaobing Sun, Tianchi Zhou, Rongcun Wang, Yucong Duan, Lili Bo, Jianming Chang. Experience Report: Investigating Bug Fixes in Machine Learning Frameworks/Libraries. Frontiers of Computer Science, 2020",
+			]
+		}
+	  },
+	  created: function () {
+	  },
+	  computed: {
+	  }
+	})
+	</script>
 </html>
