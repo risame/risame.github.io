@@ -16,5 +16,7 @@
     {"name":"李越", "education":"2019级硕士研究生", "field": "安全性缺陷分析与测试", "avatar":"http://risame.media.xy-jit.cc/members/yue.li.png", "link": ""},
     {"name":"唐奔", "education":"2019级硕士研究生", "field": "代码自动生成", "avatar":"http://risame.media.xy-jit.cc/members/ben.tang.png", "link": ""},
     {"name":"王杨杨", "education":"2019级硕士研究生", "field": "软件智能化分析", "avatar":"http://risame.media.xy-jit.cc/members/yangyang.wang.png", "link": ""},
-    {"name":"朱程", "education":"2019级硕士研究生", "field": "代码自动生成", "avatar":"http://risame.media.xy-jit.cc/members/cheng.zhu.png", "link": ""}
+    {"name":"朱程", "education":"2019级硕士研究生", "field": "代码自动生成", "avatar":"http://risame.media.xy-jit.cc/members/cheng.zhu.png", "link": ""},
+    {"name":"涂良琼", "education":"2020级硕士研究生", "field": "区块链智能合约软件漏洞检测", "avatar":"http://risame.media.xy-jit.cc/members/liangqiong.tu.png", "link": ""},
+    {"name":"李莉莉", "education":"2020级硕士研究生", "field": "安全漏洞的检测与修复", "avatar":"http://risame.media.xy-jit.cc/members/lili.li.png", "link": ""}
 ]
