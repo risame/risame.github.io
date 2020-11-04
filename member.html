@@ -224,8 +224,7 @@ var app = new Vue({
   },
   computed: {
       reshapedMembers: function () {
-          m = Math.ceil(this.members.length / 3)
-          return math.reshape(this.members, [m, 3])
+          return _.chunk(this.members, 3);
       }
   }
 })
