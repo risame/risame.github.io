@@ -6,6 +6,8 @@
     {"name":"倪珍", "education":"2017年博士研究生", "field": "软件智能化分析", "avatar":"http://risame.media.aponder.top/members/zheng.ni.png", "link": ""},
     {"name":"鞠伟嘉", "education":"2018级博士研究生", "field": "代码自动生成", "avatar":"http://risame.media.aponder.top/members/weijia.ju.png", "link": ""},
     {"name":"魏颖", "education":"2019级博士研究生", "field": "安全性缺陷分析", "avatar":"http://risame.media.aponder.top/members/ying.wei.png", "link": ""},
+    {"name":"蔡杰", "education":"2020级博士研究生", "field": "智能合约安全漏洞分析与修复", "avatar":"http://risame.media.aponder.top/members/jie.cai.png", "link": ""},
+    
     {"name":"朱轩锐", "education":"2017级硕士研究生", "field": "软件缺陷修复", "avatar":"http://risame.media.aponder.top/members/xuanrui.zhu.png", "link": ""},
     {"name":"陈定山", "education":"2017级硕士研究生", "field": "软件缺陷知识抽取", "avatar":"http://risame.media.aponder.top/members/dingshang.chen.png", "link": ""},
     {"name":"陆金婷", "education":"2018级硕士研究生", "field": "知识图谱问答", "avatar":"http://risame.media.aponder.top/members/jinting.lu.png", "link": ""},
@@ -18,5 +20,11 @@
     {"name":"王杨杨", "education":"2019级硕士研究生", "field": "软件智能化分析", "avatar":"http://risame.media.aponder.top/members/yangyang.wang.png", "link": ""},
     {"name":"朱程", "education":"2019级硕士研究生", "field": "代码自动生成", "avatar":"http://risame.media.aponder.top/members/cheng.zhu.png", "link": ""},
     {"name":"涂良琼", "education":"2020级硕士研究生", "field": "区块链智能合约软件漏洞检测", "avatar":"http://risame.media.aponder.top/members/liangqiong.tu.png", "link": ""},
-    {"name":"李莉莉", "education":"2020级硕士研究生", "field": "安全漏洞的检测与修复", "avatar":"http://risame.media.aponder.top/members/lili.li.png", "link": ""}
+    {"name":"李莉莉", "education":"2020级硕士研究生", "field": "安全漏洞的检测与修复", "avatar":"http://risame.media.aponder.top/members/lili.li.png", "link": ""},
+    
+    {"name":"杨云帆", "education":"2020级硕士研究生", "field": "安全漏洞数据挖掘", "avatar":"http://risame.media.aponder.top/members/yunfan.yang.png", "link": ""},
+    {"name":"袁砚池", "education":"2020级硕士研究生", "field": "并发软件漏洞检测", "avatar":"http://risame.media.aponder.top/members/yanchi.yuan.png", "link": ""},
+    {"name":"孟醒", "education":"2020级硕士研究生", "field": "并发软件漏洞分析", "avatar":"http://risame.media.aponder.top/members/xing.meng.png", "link": ""},
+    {"name":"薛佳雷", "education":"2020级硕士研究生", "field": "智能合约", "avatar":"http://risame.media.aponder.top/members/jialei.xue.png", "link": ""},
+    {"name":"张浩宇", "education":"2020级硕士研究生", "field": "软件缺陷定位与修复", "avatar":"http://risame.media.aponder.top/members/haoyu.zhang.png", "link": ""}
 ]
