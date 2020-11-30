@@ -133,7 +133,7 @@ function startmarquee(lh,speed,delay) {
             <table class="news"  width="950px">
                 <tr v-for="group in reshapedMembers">
                     <td v-for="member in group" align="center" height="300px" width="500px">
-                        <div class="pic"><img :src="member.avatar"></div>
+                        <div class="pic"><img :src="avatarBaseUrl + member.avatar"></div>
                         <div class="news-body">
                             <a v-if="member.link" :href="member.link">
                                 <p>{{member.name}}</p>
@@ -209,6 +209,7 @@ startmarquee(1118,200,-100);
 var app = new Vue({
   el: '#app',
   data: {
+    avatarBaseUrl: 'https://cdn.jsdelivr.net/gh/risame/risame.github.io@master/assets/images/members/',
     members: []
   },
   created: function () {
