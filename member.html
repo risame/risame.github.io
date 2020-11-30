@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
-    <title>Risame - Research in Software Analysis, Maintenance, and Evolution</title>
+    
+    <title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="css/images/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -19,39 +20,12 @@
     <script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- added by aponder START -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@6.6.5/dist/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
     <!-- added by aponder END -->
 
-<script type="text/javascript">
-function startmarquee(lh,speed,delay) { 
-    var p=false; 
-    var t; 
-    var sh; 
-    var o=document.getElementById("marqueebox"); 
-    o.innerHTML+=o.innerHTML; 
-    o.style.marginTop=0; 
-    o.onmouseover=function(){p=true;} 
-    o.onmouseout=function(){p=false;} 
-    function start(){ 
-        sh = o.offsetHeight; 
-        o.style.height = sh; 
-        t=setInterval(scrolling,speed); 
-        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
-    } 
-    function scrolling(){ 
-        if(parseInt(o.style.marginTop)%lh!=0){ 
-            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
-            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
-        }else{ 
-            clearInterval(t); 
-            setTimeout(start,delay); 
-        } 
-    } 
-    setTimeout(start,delay); 
-} 
-</script> 
 </head>
 <body>
 <!-- logo-->
@@ -62,7 +36,7 @@ function startmarquee(lh,speed,delay) {
 <!-- end of logo -->
 
 <!-- shell -->
-<div class="shell" id="app">
+<div class="shell">
     
     <!-- slider -->
     <div id="slider">
@@ -78,14 +52,10 @@ function startmarquee(lh,speed,delay) {
                   </div>
                     
                     <div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
-                        <div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
-                                <div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
-<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
-<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
-                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
-                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
-          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
-                    
+                        <div id="marqueebox" style="margin-top: -48px; height: 252px;">
+                            <div id="appBanner">
+                                <div class="tp" v-for="(award, idx) of awards">{{1+idx}}. {{award}}</div>
+                            </div>
                         </div> 
                     </div>
                 </li>
@@ -129,10 +99,10 @@ function startmarquee(lh,speed,delay) {
                 <p></p>
             </div> -->
             
-            <table class="news"  width="950px">
+            <table id="appMember" class="news"  width="950px">
                 <tr v-for="group in reshapedMembers">
                     <td v-for="member in group" align="center" height="300px" width="500px">
-                        <div class="pic"><img :src="member.avatar"></div>
+                        <div class="pic"><img :src="'assets/images/members/' + member.avatar"></div>
                         <div class="news-body">
                             <a v-if="member.link" :href="member.link">
                                 <p>{{member.name}}</p>
@@ -200,33 +170,8 @@ function startmarquee(lh,speed,delay) {
     Cufon.now();
 </script>
 </body>
-<script type="text/javascript">
-startmarquee(1118,200,-100); 
-</script> 
 
-<script>
-var app = new Vue({
-  el: '#app',
-  data: {
-    members: []
-  },
-  created: function () {
-    var _this = this
-    // var membersUrl = 'https://raw.githubusercontent.com/risame/risame.github.io/master/members.json'
-    refreshInterval = 60  // seconds
-    var _t = parseInt(Date.now() / 1000 / refreshInterval)
-    var membersUrl = '/members.json?_t=' + _t
-    axios.get(membersUrl).then(function (res) {
-        console.log(res)
-        _this.members = res.data
-    })
-  },
-  computed: {
-      reshapedMembers: function () {
-          m = Math.ceil(this.members.length / 3)
-          return math.reshape(this.members, [m, 3])
-      }
-  }
-})
-</script>
+<script src="/js/aponder/utils.js"></script>
+<script src="/js/aponder/banner.js"></script>
+<script src="/js/aponder/member.js"></script>
 </html>

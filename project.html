@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
-	<title>Risame - Research in Software Analysis, Maintenance, and Evolution</title>
+    
+	<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="css/images/favicon.ico" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -11,6 +12,12 @@
 	<script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- added by aponder START -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+	<!-- added by aponder END -->
+	
 <script type="text/javascript">
 function startmarquee(lh,speed,delay) { 
     var p=false; 
@@ -49,7 +56,7 @@ function startmarquee(lh,speed,delay) {
 <!-- end of logo -->
 
 <!-- shell -->
-<div class="shell">
+<div class="shell" id="app">
 	
 	<!-- slider -->
 	<div id="slider">
@@ -66,13 +73,9 @@ function startmarquee(lh,speed,delay) {
 			    	
 					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
 						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
-									<div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
-<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
-<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
-                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
-                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
-          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
-                						
+                            <div id="appBanner">
+                                <div class="tp" v-for="(award, idx) of awards">{{1+idx}}. {{award}}</div>
+                            </div>			
 						</div> 
 					</div>
 			    </li>
@@ -179,21 +182,7 @@ function startmarquee(lh,speed,delay) {
 					<div class="news-body" style="width:950px">
                     <h3>研究项目</h3>
 						<div class="cl">&nbsp;</div>
-						<p align="justify">  
-                           <font face="Times New Roman" size="2">[1]	基于知识探索的软件缺陷智能化修复关键技术研究. 国家自然科学基金面上项目. 61872312 . 2019/1-2022/12</font>
-<p align="justify">  
- <font face="Times New Roman" size="2">[2]	 带动态环境感知能力的电子化市场自动协商机制研究，国家自然科学资金面上项目. 61472344.  2015/1-2018/12. </font> <p align="justify">  
- <font face="Times New Roman" size="2">[3]	 国家自然科学基金国际(地区)合作与交流项目，面向动态环境的数据融合与知识建模研究， 61611540347，   2016/07-2018/06</font>
-<p align="justify">  
- <font face="Times New Roman" size="2">[4]	 基于多源软件数据挖掘的修改分析与预测关键技术研究.国家自然科学资金青年科学资金. 61402396. 2015/1-2017/12</font><p align="justify">
-<font face="Times New Roman" size="2">[5]	面向软件缺陷数据的知识表示关键技术研究. 计算机软件新技术国家重点实验室开放课题. KFKT2018B12. 2018/6-2020/5</font><p align="justify">  
-<font face="Times New Roman" size="2">[6]	 面向软件修改理解的软件数据探索技术研究. 中国博士后科学基金第57批面上资助项目. 2015M571489. 2015/1-2016/12 </font>
-<p align="justify">
-<font face="Times New Roman" size="2">[7]	修改驱动的软件数据分析技术研究. 计算机软件新技术国家重点实验室开放课题. 2014/6-2016/5</font>
-<p align="justify">  
-<font face="Times New Roman" size="2">[8]	 软件维护与演化技术的研究. 扬州大学“新世纪人才工程”培养对象优秀青年骨干教师. 2014/6-2017/5</font><p align="justify">  
-<font face="Times New Roman" size="2">[9]	 软件修改映射和特征定位，江苏省教育厅自然科学资金项目.2013-2016 </font><p align="justify">
-<font face="Times New Roman" size="2">[10]	 基于多源软件数据分析的修改分析和评估技术的研究，扬州大学科研培育基金. 2013-2014 </font>               </p>
+						<p v-for="(project, index) in projects" align="justify"><font face="Times New Roman" size="2">[{{1+index}}] {{project}}</font></p>
 					</div>
 					<div class="cl">&nbsp;</div>
 				</div>
@@ -255,7 +244,31 @@ function startmarquee(lh,speed,delay) {
 	Cufon.now();
 </script>
 </body>
-<script type="text/javascript">
-startmarquee(1118,200,-100); 
-</script> 
+<script src="/js/aponder/utils.js"></script>
+<script src="/js/aponder/banner.js"></script>
+
+<script>
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+		projects: [
+			"知识驱动的软件缺陷分析与理解关键技术研究. 国家自然科学基金面上项目. 61972335. 61872312. 2020/1-2023/12",
+			"基于知识探索的软件缺陷智能化修复关键技术研究. 国家自然科学基金面上项目. 61872312. 2019/1-2022/12",
+			"带动态环境感知能力的电子化市场自动协商机制研究. 国家自然科学资金面上项目. 61472344. 2015/1-2018/12",
+			"国家自然科学基金国际(地区)合作与交流项目. 面向动态环境的数据融合与知识建模研究. 61611540347. 2016/07-2018/06",
+			"基于多源软件数据挖掘的修改分析与预测关键技术研究. 国家自然科学资金青年科学资金. 61402396. 2015/1-2017/12",
+			"面向软件缺陷数据的知识表示关键技术研究. 计算机软件新技术国家重点实验室开放课题. KFKT2018B12. 2018/6-2020/5",
+			"面向软件修改理解的软件数据探索技术研究. 中国博士后科学基金第57批面上资助项目. 2015M571489. 2015/1-2016/12 ",
+			"修改驱动的软件数据分析技术研究. 计算机软件新技术国家重点实验室开放课题. 2014/6-2016/5",
+			"软件维护与演化技术的研究. 扬州大学“新世纪人才工程”培养对象优秀青年骨干教师. 2014/6-2017/5",
+			"软件修改映射和特征定位. 江苏省教育厅自然科学资金项目. 2013-2016",
+			"基于多源软件数据分析的修改分析和评估技术的研究. 扬州大学科研培育基金. 2013-2014",
+		]
+	  },
+	  created: function () {
+	  },
+	  computed: {
+	  }
+	})
+	</script>
 </html>
