@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
+    
 	<title>Risame - Reseach in Software Analysis, Maintenance, and Evolution</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="css/images/favicon.ico" />
@@ -12,39 +13,10 @@
 	<script src="js/Arial.font.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/js-func.js" type="text/javascript" charset="utf-8"></script>
 
-
     <!-- added by aponder START -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.min.js"></script>
 	<!-- added by aponder END -->
-	
-<script type="text/javascript">
-function startmarquee(lh,speed,delay) { 
-    var p=false; 
-    var t; 
-    var sh; 
-    var o=document.getElementById("marqueebox"); 
-    o.innerHTML+=o.innerHTML; 
-    o.style.marginTop=0; 
-    o.onmouseover=function(){p=true;} 
-    o.onmouseout=function(){p=false;} 
-    function start(){ 
-        sh = o.offsetHeight; 
-        o.style.height = sh; 
-        t=setInterval(scrolling,speed); 
-        if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
-    } 
-    function scrolling(){ 
-        if(parseInt(o.style.marginTop)%lh!=0){ 
-            o.style.marginTop=parseInt(o.style.marginTop)-1+"px"; 
-            if(Math.abs(parseInt(o.style.marginTop))>=sh/2) o.style.marginTop=0; 
-        }else{ 
-            clearInterval(t); 
-            setTimeout(start,delay); 
-        } 
-    } 
-    setTimeout(start,delay); 
-} 
-</script> 
 </head>
 <body>
 <!-- logo-->
@@ -72,13 +44,9 @@ function startmarquee(lh,speed,delay) {
 			    	
 					<div  class="text-container" style="overflow: hidden; height: 200px; margin-left: 5px;"> 
 						<div id="marqueebox" style="margin-top: -48px; height: 252px;"> 
-							<div class="tp">1. 周澄赴美国参加FSE2018会议，并作博士论坛报告和海报展示</div>
-<div class="tp">2. 研究组协办2018年扬州大学智能化软件工程学术研讨会 </div>
-<div class="tp">3. 周澄赴瑞典参加ICSE2018/ICPC2018会议，并作论文报告 </div>
-                <div class="tp">4. 杨辉硕士论文获得江苏省优秀硕士论文 </div>
-                        <div class="tp">5. 李斌、孙小兵、周澄、倪珍、鞠伟佳、陈定山等赴深圳参加NASAC2018会议 </div>
-          <div class="tp">6. 孙伟松毕业论文获省优秀论文二等奖 </div> 
-                					
+                            <div id="appBanner">
+                                <div class="tp" v-for="(award, idx) of awards">{{1+idx}}. {{award}}</div>
+                            </div>			
 						</div> 
 					</div>
 			    </li>
@@ -117,7 +85,7 @@ function startmarquee(lh,speed,delay) {
 		<!-- content -->
 		<div id="content" class="left">
 			
-			<div class="news">
+			<div class="news" id="appAward">
 				
 				<div class="news-item" >
 					<div class="news-body" style="width:950px">
@@ -221,14 +189,13 @@ function startmarquee(lh,speed,delay) {
 	Cufon.now();
 </script>
 </body>
-<script type="text/javascript">
-startmarquee(1118,200,-100); 
-</script>
+<script src="/js/aponder/utils.js"></script>
+<script src="/js/aponder/banner.js"></script>
 
 
 <script>
 	var app = new Vue({
-	  el: '#app',
+	  el: '#appAward',
 	  data: {
 		awards: {
 			sunxiaobin: [
