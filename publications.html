@@ -91,11 +91,11 @@
 		<!-- content -->
 		<div id="content" class="left">
 			<div class="news" id="appPublication">
-				<div class="news-item" v-for="(_, year) in publications">
+				<div class="news-item" v-for="year of Object.keys(publications).reverse()">
 						<div class="news-body" style="width:950px">
 							<h3>{{year}}</h3>
 							<div class="cl">&nbsp;</div>
-							<p v-for="(publication, index) in _"><font face="Times New Roman" size="2">[{{1+index}}] {{publication}}</font></p>
+							<p v-for="(publication, index) in publications[year]"><font face="Times New Roman" size="2">[{{1+index}}] {{publication}}</font></p>
 						</div>
 						<div class="cl">&nbsp;</div>
 				</div>
@@ -447,7 +447,7 @@
 				'Lili Bo, Xuanrui Zhu, Xiaobing Sun, Zhen Ni, Bin Li. Are Similar Bugs Fixed with Similar Change Operations? An Empirical Study. Chinese Journal of Electronics, 2021',
 				'李 斌, 陈定山, 孙小兵, 薄莉莉. 面向缺陷知识的多特征匹配搜索算法. 电子学报, 2021',
 			],
-			2020: [
+			'2020': [
 				"Zhen Ni, Bin Li, Xiaobing Sun, Tianhao Chen, Ben Tang, Xinchen Shi. Analyzing bug fix for automatic bug cause classification. Journal of Systems and Software, 2020, 142: 110538",
 				"Cheng Zhou, Bin Li, Xiaobing Sun. Improving software bug-specific named entity recognition with deep neural network. Journal of Systems and Software, 2020, 165: 110572 ",
 				"Xiaobing Sun, Tianchi Zhou, Rongcun Wang, Yucong Duan, Lili Bo, Jianming Chang. Experience Report: Investigating Bug Fixes in Machine Learning Frameworks/Libraries. Frontiers of Computer Science, 2020",
