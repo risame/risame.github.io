@@ -4,7 +4,7 @@
     {"name":"薄莉莉", "education":"博士、讲师", "field": "软件测试、软件缺陷、软件漏洞", "avatar":"lili.bo.png", "link": "https://risame.github.io/bll/"},
     {"name":"杨超", "education":"博士、讲师", "field": "软件理论", "avatar":"chao.yang.png", "link": ""},
     {"name":"张佳乐", "education":"博士、讲师", "field": "可信软件、人工智能安全、区块链", "avatar":"jiale.zhang.jpg", "link": "https://risame.github.io/zjl/"},
-    {"name":"陈玮彤", "education":"博士、讲师", "field": "数据安全、数字水印技术、加密技术、软件版权保护", "avatar":"weitong.chen.png", "link": "https://risame.github.io/cwt/"},
+    {"name":"陈玮彤", "education":"博士、讲师", "field": "数据安全、软件版权保护", "avatar":"weitong.chen.png", "link": "https://risame.github.io/cwt/"},
 
     {"name":"周澄", "education":"2016级博士研究生", "field": "软件智能化分析", "avatar":"cheng.zhou.png", "link": ""},
     {"name":"倪珍", "education":"2017级博士研究生", "field": "软件智能化分析", "avatar":"zheng.ni.png", "link": ""},
